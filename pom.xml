@@ -98,14 +98,12 @@
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
 	      <url>http://54.165.229.159:8081/repository/mvn-release-repo/</url>
-	      <version>0.0.1-SNAPSHOT</version>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
 	      <url>http://54.165.229.159:8081/repository/mvn-snap-repo/</url>
-	      <version>0.0.1-RELEASE</version>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
@@ -123,6 +121,12 @@
 					<target>${jdk.version}</target>
 				</configuration>
 			</plugin>
+
+			<plugin>
+                		<groupId>org.apache.maven.plugins</groupId>
+                		<artifactId>maven-deploy-plugin</artifactId>
+                		<version>3.0.0-M1</version>
+            		</plugin>
 
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
